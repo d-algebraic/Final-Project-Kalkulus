@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BelajarKu 3D</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"
+      defer
+    ></script>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div id="canvas-container"></div>
+
+    <nav>
+      <div class="logo">BelajarKu 3D</div>
+      <div class="nav-links">
+        <a class="nav-link" onclick="navigateTo('beranda')">Beranda</a>
+        <a class="nav-link" onclick="navigateTo('materi')">Materi</a>
+        <a class="nav-link" onclick="navigateTo('kalkulator')">Kalkulator</a>
+        <a class="nav-link" onclick="navigateTo('quiz')">Quiz</a>
+        <a class="nav-link" onclick="navigateTo('anggota')">Anggota</a>
+      </div>
+    </nav>
+
+    <div id="beranda" class="page active fade-in">
+      <div class="content">
+        <div class="hero">
+          <h1>Belajar 3D Interaktif</h1>
+          <p>
+            Jelajahi dunia pembelajaran 3D yang interaktif dan menarik.
+            Tingkatkan kemampuan dan pengetahuan Anda dengan cara yang
+            menyenangkan.
+          </p>
+          <button class="btn" onclick="navigateTo('materi')">
+            Mulai Belajar
+          </button>
+        </div>
+
+        <div class="features">
+          <div class="feature-card">
+            <div class="feature-icon">📚</div>
+            <h3>Materi Lengkap</h3>
+            <p>
+              Akses berbagai materi pembelajaran yang disusun secara sistematis
+              dan mudah dipahami.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🌐</div>
+            <h3>Interaktif</h3>
+            <p>
+              Pelajari dengan cara interaktif melalui animasi 3D yang memudahkan
+              pemahaman konsep.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">👥</div>
+            <h3>Komunitas</h3>
+            <p>
+              Bergabung dengan komunitas pembelajar yang aktif dan saling
+              mendukung.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="materi" class="page">
+      <div class="content">
+        <h2 class="page-title">Materi Pembelajaran</h2>
+        <p>
+          Pilihlah materi pembelajaran sesuai dengan kebutuhan Anda. Setiap
+          modul dirancang untuk memudahkan pemahaman konsep dengan visualisasi
+          3D.
+        </p>
+
+        <div class="materi-grid">
+          <div class="materi-card">
+            <div class="materi-img">
+              <img src="math.jpg" />
+            </div>
+            <div class="materi-content">
+              <h3>Pengertian Bilangan Kompleks</h3>
+              <p>
+                Pelajari konsep bilangan kompleks, operasi, dan aplikasinya
+                dalam berbagai bidang.
+              </p>
+              <a href="pengertian.html" class="btn">Lihat Materi</a>
+            </div>
+          </div>
+          <div class="materi-card">
+            <div class="materi-img">
+              <img src="math.jpg" />
+            </div>
+            <div class="materi-content">
+              <h3>Sifat-Sifat Bilangan Kompleks</h3>
+              <p>Pelajari sifat-sifat bilangan kompleks secara mendalam.</p>
+              <a href="sifat-sifat.html" class="btn">Lihat Materi</a>
+            </div>
+          </div>
+          <div class="materi-card">
+            <div class="materi-img">
+              <img src="math.jpg" />
+            </div>
+            <div class="materi-content">
+              <h3>Operasi-Operasi Bilangan Kompleks</h3>
+              <p>Pelajari cara melakukan operasi bilangan kompleks.</p>
+              <a href="operasi.html" class="btn">Lihat Materi</a>
+            </div>
+          </div>
+          <div class="materi-card">
+            <div class="materi-img">
+              <img src="math.jpg" />
+            </div>
+            <div class="materi-content">
+              <h3>Contoh Soal Bilangan Kompleks</h3>
+              <p>Latih pemahaman Anda dengan contoh soal bilangan kompleks.</p>
+              <a href="contoh-soal.html" class="btn">Lihat Materi</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="anggota" class="page">
+      <div class="content">
+        <h2 class="page-title">Tim Kami</h2>
+        <p>
+          Kenali tim pengembang dan instruktur yang akan mendukung perjalanan
+          pembelajaran Anda.
+        </p>
+        <div class="anggota-grid">
+          <div class="anggota-card">
+            <div class="anggota-img">
+              <img
+                src="Syahiid.jpg"
+                alt="Syahiid Idham Al kholilly"
+                class="anggota-photo"
+              />
+            </div>
+            <div class="anggota-content">
+              <h3>Syahiid Idham Al kholilly</h3>
+              <h4>247006111120</h4>
+              <p>Pengembang web</p>
+            </div>
+          </div>
+          <div class="anggota-card">
+            <div class="anggota-img">
+              <img
+                src="Abil.jpg"
+                alt="Muhammad Abilnur"
+                class="anggota-photo"
+              />
+            </div>
+            <div class="anggota-content">
+              <h3>Muhammad Abilnur</h3>
+              <h4>247006111099</h4>
+              <p>Pengembang Web</p>
+            </div>
+          </div>
+          <div class="anggota-card">
+            <div class="anggota-img">
+              <img
+                src="Ziya.jpg"
+                alt="Muhammad Ziya Pasya Alghifari"
+                class="anggota-photo"
+              />
+            </div>
+            <div class="anggota-content">
+              <h3>Muhammad Ziya Pasya Alghifari</h3>
+              <h4>247006111111</h4>
+              <p>Pengembang Web</p>
+            </div>
+          </div>
+          <div class="anggota-card">
+            <div class="anggota-img">
+              <img
+                src="Rizal.jpg"
+                alt="Mohammad Rizal Ramadan"
+                class="anggota-photo"
+              />
+            </div>
+            <div class="anggota-content">
+              <h3>Mohammad Rizal Ramadan</h3>
+              <h4>247006111112</h4>
+              <p>Pengembang Web</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="kalkulator" class="page">
+      <div class="content">
+        <h2 class="page-title">Kalkulator Bilangan Kompleks</h2>
+        <p>
+          Masukkan bilangan kompleks dalam format <strong>a+bi</strong> atau
+          <strong>a-bi</strong>.
+        </p>
+        <div class="calculator">
+          <input
+            type="text"
+            id="complex1"
+            placeholder="Bilangan pertama (contoh: 3+4i)"
+          />
+          <input
+            type="text"
+            id="complex2"
+            placeholder="Bilangan kedua (contoh: 1-2i)"
+          />
+          <div class="operations">
+            <button class="btn" onclick="calculateComplex('add')">
+              Tambah
+            </button>
+            <button class="btn" onclick="calculateComplex('subtract')">
+              Kurang
+            </button>
+            <button class="btn" onclick="calculateComplex('multiply')">
+              Kali
+            </button>
+            <button class="btn" onclick="calculateComplex('divide')">
+              Bagi
+            </button>
+          </div>
+          <p id="complex-result"></p>
+        </div>
+      </div>
+    </div>
+
+    <div id="quiz" class="page">
+      <div class="content">
+        <h2 class="page-title">Quiz Bilangan Kompleks</h2>
+        <p>
+          Uji pemahaman Anda tentang bilangan kompleks dengan menjawab
+          pertanyaan berikut:
+        </p>
+        <div class="quiz">
+          <p id="question"></p>
+          <input
+            type="text"
+            id="answer"
+            placeholder="Masukkan jawaban Anda (contoh: 4+2i)"
+          />
+          <button class="btn" onclick="checkQuizAnswer()">Kirim Jawaban</button>
+          <p id="quiz-feedback"></p>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        if (localStorage.getItem("goToMateri") === "true") {
+          localStorage.removeItem("goToMateri");
+          setTimeout(() => {
+            navigateTo("materi");
+          }, 300);
+        }
+      });
+    </script>
+  </body>
+</html>

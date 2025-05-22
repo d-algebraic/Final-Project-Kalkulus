@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sifat-Sifat Bilangan Kompleks</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  </head>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      gsap.from(".page-title", {
+        y: -50,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out",
+      });
+
+      gsap.from(".material-image", {
+        x: -50,
+        opacity: 0,
+        duration: 1,
+        delay: 0.3,
+        ease: "power2.out",
+      });
+
+      gsap.from(".material-description, ol", {
+        x: 50,
+        opacity: 0,
+        duration: 1,
+        delay: 0.5,
+        ease: "power2.out",
+      });
+
+      gsap.from(".btn-container", {
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
+        delay: 0.8,
+        ease: "back.out(1.7)",
+      });
+    });
+  </script>
+
+  <body>
+    <div class="content">
+      <h1 class="page-title">Sifat-Sifat Bilangan Kompleks</h1>
+      <div class="material-section">
+        <img
+          src="images/bilangan-kompleks.png"
+          alt="   "
+          class="material-image"
+        />
+        <div class="material-description">
+          <p>
+            Himpunan bilangan kompleks (<code>ℂ</code>) bersama operasi
+            penjumlahan dan perkalian membentuk bidang (field) kompleks.
+            Sifat-sifat yang berlaku pada bilangan kompleks <code>Z₁</code>,
+            <code>Z₂</code>, dan <code>Z₃</code> adalah:
+          </p>
+          <ol>
+            <li>
+              <strong>Sifat Tertutup:</strong>
+              <p><code>Z₁ + Z₂ ∈ ℂ</code> dan <code>Z₁ ⋅ Z₂ ∈ ℂ</code>.</p>
+            </li>
+            <li>
+              <strong>Sifat Komutatif:</strong>
+              <ul>
+                <li><code>Z₁ + Z₂ = Z₂ + Z₁</code></li>
+                <li><code>Z₁ ⋅ Z₂ = Z₂ ⋅ Z₁</code></li>
+              </ul>
+            </li>
+            <li>
+              <strong>Sifat Asosiatif:</strong>
+              <ul>
+                <li><code>(Z₁ + Z₂) + Z₃ = Z₁ + (Z₂ + Z₃)</code></li>
+                <li><code>(Z₁ ⋅ Z₂) ⋅ Z₃ = Z₁ ⋅ (Z₂ ⋅ Z₃)</code></li>
+              </ul>
+            </li>
+            <li>
+              <strong>Sifat Distributif:</strong>
+              <p><code>Z₁ ⋅ (Z₂ + Z₃) = (Z₁ ⋅ Z₂) + (Z₁ ⋅ Z₃)</code>.</p>
+            </li>
+            <li>
+              <strong>Elemen Netral Penjumlahan:</strong>
+              <p>
+                Ada <code>0 = 0 + i0 ∈ ℂ</code>, sehingga
+                <code>Z + 0 = Z</code>.
+              </p>
+            </li>
+            <li>
+              <strong>Elemen Netral Perkalian:</strong>
+              <p>
+                Ada <code>1 = 1 + i0 ∈ ℂ</code>, sehingga
+                <code>Z ⋅ 1 = Z</code>.
+              </p>
+            </li>
+            <li>
+              <strong>Elemen Invers Penjumlahan:</strong>
+              <p>
+                Untuk setiap <code>Z = x + iy ∈ ℂ</code>, ada
+                <code>-Z = -x - iy</code>, sehingga <code>Z + (-Z) = 0</code>.
+              </p>
+            </li>
+            <li>
+              <strong>Elemen Invers Perkalian:</strong>
+              <p>
+                Untuk setiap <code>Z = x + iy ∈ ℂ</code>, ada
+                <code>Z⁻¹ = 1 / Z</code>, sehingga <code>Z ⋅ Z⁻¹ = 1</code>.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <div class="btn-container">
+      <a
+        href="index.html"
+        class="btn"
+        onclick="localStorage.setItem('goToMateri', 'true')"
+        >Kembali</a
+      >
+    </div>
+  </body>
+</html>

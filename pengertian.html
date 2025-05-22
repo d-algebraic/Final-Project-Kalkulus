@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pengertian Bilangan Kompleks</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  </head>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      gsap.from(".page-title", {
+        y: -50,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out",
+      });
+
+      gsap.from(".material-image", {
+        x: -50,
+        opacity: 0,
+        duration: 1,
+        delay: 0.3,
+        ease: "power2.out",
+      });
+
+      gsap.from(".material-description, ol", {
+        x: 50,
+        opacity: 0,
+        duration: 1,
+        delay: 0.5,
+        ease: "power2.out",
+      });
+
+      gsap.from(".btn-container", {
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
+        delay: 0.8,
+        ease: "back.out(1.7)",
+      });
+    });
+  </script>
+  <body>
+    <div class="content">
+      <h1 class="page-title">Pengertian Bilangan Kompleks</h1>
+      <div class="material-section">
+        <img
+          src="images/bilangan-kompleks.png"
+          alt="       "
+          class="material-image"
+        />
+        <div class="material-description">
+          <h2>Definisi 1</h2>
+          <p>
+            Bilangan kompleks adalah bilangan yang berbentuk:
+            <code>a + bi</code> atau <code>a + ib</code>, di mana
+            <code>a</code> dan <code>b</code> adalah bilangan real, dan
+            <code>i² = –1</code>.
+          </p>
+          <p>
+            Bilangan kompleks dinyatakan dengan huruf <code>z</code>, sedangkan
+            huruf <code>x</code> dan <code>y</code> menyatakan bilangan real.
+            Jika <code>z = x + iy</code> menyatakan sembarang bilangan kompleks,
+            maka:
+          </p>
+          <ul>
+            <li><code>x</code> dinamakan bagian real dari <code>z</code>.</li>
+            <li>
+              <code>y</code> dinamakan bagian imajiner dari <code>z</code>.
+            </li>
+          </ul>
+          <p>
+            Bagian real dan bagian imajiner dari bilangan kompleks
+            <code>z</code> biasanya dinyatakan dengan <code>Re(z)</code> dan
+            <code>Im(z)</code>.
+          </p>
+
+          <h2>Definisi 2</h2>
+          <p>
+            Bilangan kompleks <code>z₁ = x₁ + iy₁</code> dan
+            <code>z₂ = x₂ + iy₂</code> dikatakan sama, <code>z₁ = z₂</code>,
+            jika dan hanya jika:
+          </p>
+          <ul>
+            <li><code>x₁ = x₂</code>.</li>
+            <li><code>y₁ = y₂</code>.</li>
+          </ul>
+
+          <h2>Definisi 3</h2>
+          <p>
+            Untuk bilangan kompleks <code>z₁ = x₁ + iy₁</code> dan
+            <code>z₂ = x₂ + iy₂</code>, jumlah dan hasil kali mereka
+            didefinisikan sebagai berikut:
+          </p>
+          <ul>
+            <li>
+              <strong>Jumlah:</strong>
+              <code>z₁ + z₂ = (x₁ + x₂) + i(y₁ + y₂)</code>.
+            </li>
+            <li>
+              <strong>Hasil Kali:</strong>
+              <code>z₁ • z₂ = (x₁x₂ – y₁y₂) + i(x₁y₂ + x₂y₁)</code>.
+            </li>
+          </ul>
+
+          <h2>Himpunan Bilangan Kompleks</h2>
+          <p>
+            Himpunan semua bilangan kompleks diberi notasi <code>ℂ</code>,
+            sehingga: <code>ℂ = { z | z = x + iy, x ∈ ℝ, y ∈ ℝ }</code>.
+          </p>
+          <p>
+            Jika <code>Im(z) = 0</code>, maka bilangan kompleks
+            <code>z</code> menjadi bilangan real <code>x</code>, sehingga
+            bilangan real adalah keadaan khusus dari bilangan kompleks (<code
+              >ℝ ⊂ ℂ</code
+            >).
+          </p>
+          <p>
+            Jika <code>Re(z) = 0</code> dan <code>Im(z) ≠ 0</code>, maka
+            <code>z</code> menjadi <code>iy</code> dan dinamakan bilangan
+            imajiner murni. Bilangan imajiner murni dengan <code>y = 0</code>,
+            yaitu bilangan <code>i</code>, dinamakan satuan imajiner.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="video-container">
+      <iframe
+        width="500"
+        height="255"
+        src="https://www.youtube.com/embed/VyBGh3gktGI?si=Df7jOJStpPaRd-g1"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <div class="btn-container">
+      <a
+        href="index.html"
+        class="btn"
+        onclick="localStorage.setItem('goToMateri', 'true')"
+        >Kembali</a
+      >
+    </div>
+  </body>
+</html>

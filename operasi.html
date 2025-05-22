@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operasi Bilangan Kompleks</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  </head>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      gsap.from(".page-title", {
+        y: -50,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out",
+      });
+
+      gsap.from(".material-image", {
+        x: -50,
+        opacity: 0,
+        duration: 1,
+        delay: 0.3,
+        ease: "power2.out",
+      });
+
+      gsap.from(".material-description, ol", {
+        x: 50,
+        opacity: 0,
+        duration: 1,
+        delay: 0.5,
+        ease: "power2.out",
+      });
+
+      gsap.from(".btn-container", {
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
+        delay: 0.8,
+        ease: "back.out(1.7)",
+      });
+    });
+  </script>
+  <body>
+    <div class="content">
+      <h1 class="page-title">Operasi-Operasi Bilangan Kompleks</h1>
+      <div class="material-section">
+        <img
+          src="images/bilangan-kompleks.png"
+          alt="            "
+          class="material-image"
+        />
+        <div class="material-description">
+          <p>
+            Dalam sistem bilangan kompleks terdapat beberapa operasi seperti
+            operasi penjumlahan, pengurangan, perkalian, pembagian, dan
+            sebagainya.
+          </p>
+
+          <h2>Operasi Penjumlahan</h2>
+          <p>
+            Dalam operasi penjumlahan bilangan kompleks, penjumlahan dilakukan
+            dengan mengelompokkan bagian real dan bagian imajiner, lalu
+            dijumlahkan masing-masing.
+          </p>
+          <p><strong>Contoh:</strong></p>
+          <pre>
+(1 + i2) + (2 – i3)
+= (1 + 2) + (i2 – i3)
+= 3 – i
+                </pre
+          >
+
+          <h2>Operasi Pengurangan</h2>
+          <p>
+            Sama dengan operasi penjumlahan, pada operasi pengurangan bilangan
+            kompleks dilakukan dengan mengelompokkan bagian real dan imajiner,
+            kemudian dilakukan pengurangan pada masing-masing bagian.
+          </p>
+          <p><strong>Contoh:</strong></p>
+          <pre>
+(3 + i2) – (3 – i2)
+= (3 – 3) + (i2 – (-i2))
+= 4i
+                </pre
+          >
+
+          <h2>Operasi Perkalian</h2>
+          <p>
+            Operasi perkalian bilangan kompleks dilakukan dengan mengalikan
+            setiap bilangan real dan imajiner yang ada. Dapat didefinisikan
+            sebagai:
+          </p>
+          <p><code>(a + ib)(c + id) = (ac – bd) + i(ad + bc)</code></p>
+          <p><strong>Contoh:</strong></p>
+          <pre>
+(2 + i3)(1 – i2)
+= 2⋅1 – 2⋅i2 + i3⋅1 – i3⋅i2
+= 2 – i4 + i3 – i6
+= 2 – i + 6
+= 8 – i
+                </pre
+          >
+
+          <h2>Operasi Pembagian</h2>
+          <p>
+            Operasi pembagian bilangan kompleks dilakukan dengan mengalikan
+            konjugat dari pembagi bilangan kompleks tersebut. Dapat
+            didefinisikan sebagai:
+          </p>
+          <p>
+            <code>(a + ib) / (c + id) = [(a + ib)(c - id)] / (c^2 + d^2)</code>
+          </p>
+          <p><strong>Contoh:</strong></p>
+          <pre>
+(3 + 4i) / (1 - 2i)
+= [(3 + 4i)(1 + 2i)] / [(1 - 2i)(1 + 2i)]
+= [3*1 + 3*2i + 4i*1 + 4i*2i] / [1^2 - (2i)^2]
+= [3 + 6i + 4i + 8i^2] / [1 - 4i^2]
+= [3 + 10i + 8(-1)] / [1 - 4(-1)]
+= [3 + 10i - 8] / [1 + 4]
+= [-5 + 10i] / 5
+= -1 + 2i
+                </pre
+          >
+        </div>
+      </div>
+    </div>
+    <div class="btn-container">
+      <a
+        href="index.html"
+        class="btn"
+        onclick="localStorage.setItem('goToMateri', 'true')"
+        >Kembali</a
+      >
+    </div>
+  </body>
+</html>

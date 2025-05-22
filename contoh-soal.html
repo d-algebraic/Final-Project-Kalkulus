@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contoh Soal Bilangan Kompleks</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  </head>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      gsap.from(".page-title", {
+        y: -50,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out",
+      });
+
+      gsap.from(".material-image", {
+        x: -50,
+        opacity: 0,
+        duration: 1,
+        delay: 0.3,
+        ease: "power2.out",
+      });
+
+      gsap.from(".material-description, ol", {
+        x: 50,
+        opacity: 0,
+        duration: 1,
+        delay: 0.5,
+        ease: "power2.out",
+      });
+
+      gsap.from(".btn-container", {
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
+        delay: 0.8,
+        ease: "back.out(1.7)",
+      });
+    });
+  </script>
+  <body>
+    <div class="content">
+      <h1 class="page-title">Contoh Soal Bilangan Kompleks</h1>
+      <div class="material-section">
+        <img
+          src="images/bilangan-kompleks.png"
+          alt="                "
+          class="material-image"
+        />
+        <ol style="display: flex; flex-direction: column; gap: 24px">
+          <li>
+            Sederhanakan hasil dari:<br />
+            <code>(3 + 2i) + (4 - 5i) - (2 + 3i)</code>
+          </li>
+          <li>
+            Hitung hasil dari:<br />
+            <code>(2 + 3i)(4 - i)</code>
+          </li>
+          <li>
+            Tentukan modulus dan argument dari bilangan kompleks berikut:<br />
+            <code>z=−3+4i</code>
+          </li>
+          <li>
+            Jika z=5+2i dan w=1−i, hitung:<br />
+            <code>w/z</code>
+          </li>
+          <li>
+            Ubah bilangan kompleks berikut ke bentuk polar dan eksponensial:<br />
+            <code>z=1+i</code>
+          </li>
+        </ol>
+      </div>
+    </div>
+    <div class="btn-container">
+      <a
+        href="index.html"
+        class="btn"
+        onclick="localStorage.setItem('goToMateri', 'true')"
+        >Kembali</a
+      >
+    </div>
+  </body>
+</html>
